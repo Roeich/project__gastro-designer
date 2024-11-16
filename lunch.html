@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastro designer - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="main_container">
+            <form action="#" onsubmit="addDish(event)" autocomplete="off">
+                <div class="form_box">
+
+                    <!-- left box -->
+                    <div class="form_box_left">
+                        <h2 class="form_title">Gastro <span class="text_primary">Designer</span></h2>
+                        
+                        <!-- form tabs -->
+                        <div class="form_tabs">
+                            <div class="form_tab">
+                                <a class="form_tabBtn" href="index.html">HAUPTKARTE</a>
+                            </div>
+                            <div class="form_tab">
+                                <a class="form_tabBtn active" href="lunch.html">LUNCH</a>
+                            </div>
+                            <div class="form_tab">
+                                <a class="form_tabBtn" href="menu-mario-laabs.html">MENÜ MARIO LAABS</a>
+                            </div>
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="title" placeholder="Titel" required>
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="note" placeholder="Beschreibung">
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="price1desc" placeholder="Zusatzbeschreibung Preis 1">
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="price1" placeholder="Preis 1" maxlength="3"  oninput="formatPrice(this)" required>
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="price2desc" placeholder="Zusatzbeschreibung Preis 2">
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="price2" placeholder="Preis 2" maxlength="3"  oninput="formatPrice(this)">
+                        </div>
+                        <div class="input_item">
+                            <select name="category" required>
+                                <option selected disabled value="">Kategorie</option>
+                                <option value="starter">Starter</option>
+                                <option value="main">Main</option>
+                                <option value="dessert">Dessert</option>
+                                <option value="extra">Extra</option>
+                            </select>
+                        </div>
+                        <div class="input_item">
+                            <button class="btn_primary w_100" type="submit">HINZUFÜGEN</button>
+                        </div>
+                        <div class="input_item text_right">
+                            <button class="btn_secondary" type="button" onclick="generatePDF()">PDF LADEN</button>
+                        </div>
+                    </div>
+
+                    <!-- right box -->
+                    <div class="form_box_right">
+                        <h3 class="form_tabContentTitle">LUNCH</h3>
+                        <div class="preview_area">
+                            <h2 class="page_title">Lunch</h2>
+                            <div class="menu_section menu_starter" id="starter">
+                                <h3 class="menu_title">STARTER</h3>
+                                <div class="menu_dishs">
+                                    
+                                </div>
+                            </div>
+                            <div class="menu_section menu_main_course" id="main">
+                                <h3 class="menu_title">MAIN</h3>
+                                <div class="menu_dishs">
+                                
+                                </div>
+                            </div>
+                            <div class="menu_section menu_dessert" id="dessert">
+                                <h3 class="menu_title">DESSERT</h3>
+                                <div class="menu_dishs">
+                                    
+                                </div>
+                            </div>
+                            <div class="menu_section menu_classic" id="classic">
+                                <h3 class="menu_title">EXTRA</h3>
+                                <div class="menu_dishs">
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!--  -->
+    <script src="assets/js/jspdf.umd.min.js"></script>
+    <script src="assets/js/html2canvas.min.js"></script>
+    <script src="assets/js/purify.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

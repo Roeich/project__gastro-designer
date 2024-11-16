@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastro designer - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="main_container">
+            <form action="#" onsubmit="addDish(event)" autocomplete="off">
+                <div class="form_box">
+
+                    <!-- left box -->
+                    <div class="form_box_left">
+                        <h2 class="form_title">Gastro <span class="text_primary">Designer</span></h2>
+                        
+                        <!-- form tabs -->
+                        <div class="form_tabs">
+                            <div class="form_tab">
+                                <a class="form_tabBtn" href="index.html">HAUPTKARTE</a>
+                            </div>
+                            <div class="form_tab">
+                                <a class="form_tabBtn" href="lunch.html">LUNCH</a>
+                            </div>
+                            <div class="form_tab">
+                                <a class="form_tabBtn active" href="menu-mario-laabs.html">MENÜ MARIO LAABS</a>
+                            </div>
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="title" placeholder="Titel" required>
+                        </div>
+                        <div class="input_item">
+                            <input type="text" name="note" placeholder="Beschreibung">
+                        </div>
+                        <div class="input_row">
+                            <div class="input_item w-70">
+                                <input type="text" name="price1desc" placeholder="4 GÄNGE BESCHREIBUNG">
+                            </div>
+                            <div class="input_item w-30">
+                                <input type="text" name="price1desc" placeholder="Preis">
+                            </div>
+                        </div>
+                        <div class="input_row">
+                            <div class="input_item w-70">
+                                <input type="text" name="price1desc" placeholder="5 GÄNGE BESCHREIBUNG">
+                            </div>
+                            <div class="input_item w-30">
+                                <input type="text" name="price1desc" placeholder="Preis">
+                            </div>
+                        </div>
+                        <div class="input_row mb_lg">
+                            <div class="input_item w-70">
+                                <input type="text" name="price1desc" placeholder="6 GÄNGE BESCHREIBUNG">
+                            </div>
+                            <div class="input_item w-30">
+                                <input type="text" name="price1desc" placeholder="Preis">
+                            </div>
+                        </div>
+                        <div class="input_item">
+                            <button class="btn_primary w_100" type="submit">HINZUFÜGEN</button>
+                        </div>
+                        <div class="input_item text_right">
+                            <button class="btn_secondary" type="button" onclick="generatePDF()">PDF LADEN</button>
+                        </div>
+                    </div>
+
+                    <!-- right box -->
+                    <div class="form_box_right">
+                        <h3 class="form_tabContentTitle">MANÜ MARIO LAABS</h3>
+                        <div class="preview_area">
+                            <div class="menu_section menu_starter" id="starter">
+                                <h3 class="menu_title">MENÜ MARIO LAABS</h3>
+                                <div class="menu_dishs">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!--  -->
+    <script src="assets/js/jspdf.umd.min.js"></script>
+    <script src="assets/js/html2canvas.min.js"></script>
+    <script src="assets/js/purify.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

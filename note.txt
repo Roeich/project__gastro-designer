@@ -1,0 +1,48 @@
+Each page has specific requirements, so I’ve divided the tasks as follows:
+
+1. A general list that applies to all tabs/cards.
+2. Specific requirements for each individual card.
+
+I will also send you the three menu designs, which will need to be adapted accordingly.
+
+General:
+
+• Price Display: Prices must allow for three-digit numbers in all areas.
+• Exported PDF Layout: The spacing between individual dishes in the exported PDF can be slightly increased to reduce excessive empty space at the bottom.
+• Footer Text Consistency: On two cards, there is a note at the bottom. This text must always appear in the same position in the exported PDF.
+• Save Functionality: We need a saving feature. Ideally, every time a dish is added to the menu, it saves the current state. Even if the browser is closed, reopening it should restore the last saved state. Is this possible?
+• Navigation Tabs: Instead of the black footer text, there should now be navigation tabs to switch between the individual cards.
+• Reiter Name Display: On the right-hand side, above the preview, the name of the respective tab should be displayed. To accommodate this, the card preview might need to shift slightly downward.
+
+Page-Specific Requirements:
+
+Main Menu / Card 1
+
+• The “MAIN MENU” tab is highlighted.
+• The preview on the right displays “MAIN MENU” above it.
+
+Lunch / Card 2
+
+• The “LUNCH” tab is highlighted.
+• The preview on the right displays “LUNCH” above it.
+• New Categories: STARTER, MAIN, DESSERT, EXTRA.
+• Special Category: COURSES.
+• If this category is selected, “Price1” should display the price for a 2-course menu, and “Price2” for a 3-course menu.
+• The COURSES section in the PDF is without a category and is positioned between DESSERT and EXTRA.
+
+Menu Mario Laabs / Card 3
+
+• The “MENU MARIO LAABS” tab is highlighted.
+• The preview on the right displays “MENU MARIO LAABS” above it.
+• No Categories: This page includes only TITLE and DESCRIPTION fields.
+• Conditions to Add to Menu: One of the following four conditions must be met to add an item:
+1. There is a TITLE and a DESCRIPTION.
+2. There is a “4-COURSE DESCRIPTION” and a “PRICE.”
+3. There is a “5-COURSE DESCRIPTION” and a “PRICE.”
+4. There is a “6-COURSE DESCRIPTION” and a “PRICE.”
+
+That’s quite a lot of information! Please take your time to review it thoroughly and let me know if everything is feasible or if you need anything else to ensure this can be implemented by Thursday (4 days from now).
+
+Also, let me know how many hours you estimate for this project and provide me with a quote. The compensation we discussed last time isn’t sufficient to reflect the effort required.
+
+Thank you so much in advance!
