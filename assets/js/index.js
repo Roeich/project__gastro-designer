@@ -32,7 +32,6 @@ function addDish(event) {
     const price2 = form["price2"].value.trim() ? form["price2"].value.trim() : ''; // Append Euro if price is provided
     const category= form["category"].value.trim();
 
-    console.log(category);
     if(title!=="" && note!=="" && category!=="" && price1!==""){
         const dish = document.createElement('div');
         dish.className = 'dish';
@@ -95,15 +94,24 @@ function removeItem(element){
     const dish = element.closest('.dish');
     dish.remove();
 }
-function generatePDF() {
+function generatePDF(designType) {
     let page = document.createElement("div");
     page.classList.add("page");
     page.setAttribute("id", "page");
 
     let inner_content = `<div class="page_container">`;
+    if(designType=="lunch"){
+        inner_content +=`<h2 class="page_title">Lunch</h2>`;
+    }
+    let categoryList;
+    if(designType=="home"){
+        categoryList=["starter", "main_course", "classic", "dessert"];
+    }else if(designType=="lunch"){
+        categoryList=["starter", "main", "dessert", "extra"];
 
+    }
     // For each category, create an individual area with a title
-    ["starter", "main_course", "classic", "dessert"].forEach((category) => {
+    categoryList.forEach((category) => {
         const section = document.getElementById(category);
         const title = section.querySelector(".menu_title").textContent;
 
@@ -121,7 +129,6 @@ function generatePDF() {
             const dish_price_desc_2 = dish.querySelector(".dish_price_desc_2")!==null?dish.querySelector(".dish_price_desc_2").textContent.trim():"";
             const dish_price_2 = dish.querySelector(".dish_price_2")?dish.querySelector(".dish_price_2").textContent.trim():"";
 
-            console.log(dish_price_desc_1,dish_price_1,dish_price_desc_2,dish_price_2);
             inner_content += `
                 <div class="page_dish">
                     <div class="page_dish_details_row">
@@ -153,7 +160,7 @@ function generatePDF() {
         inner_content += `</div></div>`;
     });
 
-    inner_content += `</div>`;
+    inner_content += `<div class="page_footer">Alle Preise verstehen sich in Euro und inklusive der gesetzlichen Mehrwertsteue</div></div>`;
     page.innerHTML = inner_content;
 
     // Append page temporarily to the DOM for rendering

@@ -237,6 +237,7 @@ button:active{
     font-weight: 300;
     background-color: #F9F9F9;
     padding: 2.5rem 1.5rem;
+    position: relative;
 }
 .preview_area *{
     line-height: 1.2;
@@ -253,6 +254,9 @@ button:active{
 .menu_starter{
     min-height: 11.5rem;
 }
+.menu_main{
+    min-height: 11.5rem;
+}
 .menu_main_course{
     min-height: 14rem;
 }
@@ -260,6 +264,9 @@ button:active{
     min-height: 11.5rem;
 }
 .menu_dessert{
+    min-height: 11.5rem;
+}
+.menu_extra{
     min-height: 11.5rem;
 }
 .menu_title{
@@ -390,7 +397,8 @@ button:active{
 }
 
 .page_title{
-    font-size: 46pt;
+    font-size: 62pt;
+    line-height: 1;
     font-family:"Lovely-Melody";
     text-align: center;
     text-transform: none;
@@ -404,6 +412,9 @@ button:active{
     margin-bottom: 0pt;
 }
 .page_menu_starter{
+    min-height: 160pt;
+}
+.page_menu_main{
     min-height: 160pt;
 }
 .page_menu_main_course{
@@ -474,6 +485,7 @@ button:active{
     padding-left: 4.8pt;
 }
 .page_footer{
+    font-size: 0.8rem;
     position: absolute;
     left: 0px;
     bottom: 0px;
